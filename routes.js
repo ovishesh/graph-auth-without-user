@@ -1,5 +1,5 @@
-var auth = require('../auth');
-var graph = require('../graph');
+var auth = require('./auth');
+var graph = require('./graph');
 
 var appRouter = function (app) {
     app.get("/", function(req, res) {
@@ -27,26 +27,6 @@ var appRouter = function (app) {
             console.error('>>> Error getting access token: ' + error);
             res.status(400).send('>>> Error getting users:' + error);
         });
-    });
-
-    app.post("/getAllDocuments", function(req, res) {
-        if(req.body.clientkey == 'khtdkhtfkuygljgfkytdutrd')
-        {
-            auth.getAccessToken().then(function (token) {
-                graph.getKbArticles(token, req.body.id).then(function (htmlResponse){
-                    res.status(200).send(htmlResponse);
-                });
-                
-            }, function (error) {
-                console.error('>>> Error getting access token: ' + error);
-                res.status(400).send('>>> Error getting users:' + error);
-            });
-        }
-        else
-        {
-            res.status(200).send("Invalid key");
-        }
-        
     });
 }
   module.exports = appRouter;
