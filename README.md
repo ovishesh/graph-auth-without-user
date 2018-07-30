@@ -39,6 +39,8 @@ GET https://login.microsoftonline.com/{TENANT_ID}/adminconsent
 
 
 ## Addiotional Resources
+1. [Microsoft Graph API](http://graph.microsoft.com)
+1. [Microsoft Graph Explorer](https://developer.microsoft.com/en-us/graph/graph-explorer)
 1. [App types for Azure AD v2 endpoint](https://docs.microsoft.com/en-us/azure/active-directory/develop/active-directory-v2-flows)
 1. [AD v2 and MSAL from a developers point of view](https://www.kompozure.com/blog/azure-ad-v2-and-msal-from-developers-point-of-view/)
 1. [Get Auth token based access without a user](https://developer.microsoft.com/en-us/graph/docs/concepts/auth_v2_service)
