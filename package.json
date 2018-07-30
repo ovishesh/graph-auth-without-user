@@ -1,0 +1,32 @@
+{
+  "name": "graphauthwithoutuser",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ovishesh/graph-auth-without-user.git"
+  },
+  "keywords": [
+    "auth",
+    "ad",
+    "graph",
+    "no-user",
+    "app-only"
+  ],
+  "author": "Vishesh Oberoi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ovishesh/graph-auth-without-user/issues"
+  },
+  "homepage": "https://github.com/ovishesh/graph-auth-without-user#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "dotenv": "^6.0.0",
+    "express": "^4.16.3",
+    "request": "^2.87.0"
+  }
+}
