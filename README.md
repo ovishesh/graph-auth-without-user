@@ -15,7 +15,7 @@ This repository is quickstart on integrating AD OAuth v2 authentication flow, ut
 1. Add Web platform under **Platforms** on the app registration page, as per the screenshot below. Don't forget to save your changes at the end of the page.
 ![Platforms](./assets/platform.png)
 
-1. **Get administrator consent** - inorder to access information without a user being involved, you need to get permissions from the admin user. Make the below REST GET request to get admin access on a dev/test O365 tenant. Alternatively you can replace the values and paste the below URL into a browser address bar too.
+1. **Get administrator consent** - inorder to access information without a user being involved, you need to get permissions from the admin user. Make the below REST GET request to get admin access on a dev/test O365 tenant. Alternatively you can replace the values and paste the below URL into a browser address bar too. You can find your Tenant ID by navigating to [https://portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/Properties](https://portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/Properties)
 
 ````
 // Line breaks are for legibility only.
