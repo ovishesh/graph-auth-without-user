@@ -1,6 +1,6 @@
 #How to complete Microsoft AD OAuth v2 authentication with a Node.js API
 
-This repository is quickstart on integrating AD OAuth v2 authentication flow, utilising REST interface, to access information stored in the Microsoft Graph. 
+This repository is quickstart on integrating AD OAuth v2 authentication flow, utilising REST interface, to access information stored in the Microsoft Graph. This sample uses the App-only auth flow where there is no need for a user to be involved in the flow. This is great for APIs, background workers, etc.
 
 ## Pre-requisites 
 * [Node.js](https://nodejs.org/en/) is required to run the app and to install dependencies.
