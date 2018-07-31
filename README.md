@@ -19,13 +19,13 @@ This repository is quickstart on integrating AD OAuth v2 authentication flow, ut
 
 ````
 // Line breaks are for legibility only.
-//state is just a added variable for continunity in case you have multiple requests orginiating from the same app.
-//redirect_uri can be anything you like as long as it matches the value from the previous step.
+// "state" is just a added variable for continunity in case you have multiple requests orginiating from the same app.
+// "redirect_uri" can be anything you like as long as it matches the value from the previous step.
 
 GET https://login.microsoftonline.com/{TENANT_ID}/adminconsent
 ?client_id={get Application Id from App Registration page from Step #1}
 &state=12345
-&redirect_uri=https://bing.com
+&redirect_uri=https://google.com
 
 ````
 
