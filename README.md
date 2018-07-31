@@ -2,6 +2,8 @@
 
 This repository is quickstart on integrating AD OAuth v2 authentication flow, utilising REST interface, to access information stored in the Microsoft Graph. This sample uses the App-only auth flow where there is no need for a user to be involved in the flow. This is great for APIs, background workers, etc.
 
+This sample uses v2, but if you're not sure whether to use v1 or v2, see [this article here](https://docs.microsoft.com/en-us/azure/active-directory/develop/active-directory-v2-compare).
+
 ## Pre-requisites 
 * [Node.js](https://nodejs.org/en/) is required to run the app and to install dependencies.
 * [Office 365 Developer Account](https://developer.microsoft.com/en-us/office/dev-program)
@@ -15,7 +17,7 @@ This repository is quickstart on integrating AD OAuth v2 authentication flow, ut
 1. Add Web platform under **Platforms** on the app registration page, as per the screenshot below. Don't forget to save your changes at the end of the page.
 ![Platforms](./assets/platform.png)
 
-1. **Get administrator consent** - inorder to access information without a user being involved, you need to get permissions from the admin user. Make the below REST GET request to get admin access on a dev/test O365 tenant. Alternatively you can replace the values and paste the below URL into a browser address bar too. You can find your Tenant ID by navigating to [https://portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/Properties](https://portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/Properties)
+1. **Get administrator consent** - inorder to access information without a user being involved, you need to get permissions from the admin user. Make the below REST GET request to get admin access on a dev/test O365 tenant. Alternatively you can replace the values and paste the below URL into a browser address bar too. 
 
 ````
 // Line breaks are for legibility only.
@@ -28,6 +30,12 @@ GET https://login.microsoftonline.com/{TENANT_ID}/adminconsent
 &redirect_uri=https://google.com
 
 ````
+
+> Where to find your {TENANT_ID}? <br>
+>You can find your Tenant ID by navigating to to the [Azure Portal here](https://portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/Properties).
+
+>Here is an example of the GET request respresenting the values you will have to fill in based on the code snippet above: <br>
+> `https://login.microsoftonline.com/c8f54d43-a05e-48f4-afeb-0028c5c865bb/adminconsent?client_id=6731de76-14a6-49ae-97bc-6eba6914391e&state=12345&redirect_uri=http://google.com `
 
 ## Run this Sample
 1. Rename [`.env.template` file](./.env.template) to `.env` and enter your authentication values
